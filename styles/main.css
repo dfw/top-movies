@@ -137,6 +137,7 @@ h1 {
   background: none;
   border: 0;
   border-bottom: 1px solid #333;
+  border-radius: 0;
   display: block;
   margin: 0 auto;
   padding: 0;
