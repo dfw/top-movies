@@ -155,7 +155,8 @@ h1 {
 }
 
 #header {
-  padding: 0 15px;
+  margin: 0 auto;
+  width: 300px;
 }
 
 #header:after {
@@ -196,9 +197,10 @@ h1 {
 }
 
 #movies {
+  margin: 0 auto;
   min-height: 200px;
-  padding: 0 15px;
   position: relative;
+  width: 300px;
 }
 
 #movies.loading {
@@ -318,12 +320,17 @@ h1 {
   display: block;
 }
 
+#pagination {
+  margin: 0 auto;
+  width: 300px;
+}
+
 #pagination ul {
   font-size: 16px;
   line-height: 16px;
   list-style: none;
   margin: 0 0 20px;
-  padding: 0 15px;
+  padding: 0;
   text-align: center;
 }
 
@@ -362,8 +369,8 @@ h1 {
 }
 
 #footer {
-  margin: 0 0 20px;
-  padding: 0 15px;
+  margin: 0 auto 20px;
+  width: 300px;
 }
 
 #footer img {
