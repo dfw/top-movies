@@ -1,4 +1,6 @@
 $(function() {
+  var user_action = ('ontouchend' in document.documentElement) ? 'ontouchend' : 'click';
+
   var movie_search = {
     url: 'https://api.themoviedb.org/3/discover/movie',
     data: {
@@ -178,7 +180,7 @@ $(function() {
     $('html, body').scrollTop(0);
   });
 
-  $('body').on('click', '#pagination .prev, #pagination .next', function() {
+  $('body').on(user_action, '#pagination .prev, #pagination .next', function() {
     var page = movie_search.data.page;
 
     if ($(this).hasClass('prev')) {
@@ -192,7 +194,7 @@ $(function() {
     $('html, body').scrollTop(0);
   });
 
-  $('body').on('click', '#layout li', function() {
+  $('body').on(user_action, '#layout li', function() {
     movie_search.change_layout(this.id);
   });
 
