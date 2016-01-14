@@ -141,7 +141,7 @@ $(function() {
 
       setTimeout(function() {
         $('#year').val('201');
-      }, 1650);
+      }, 1600);
 
       setTimeout(function() {
         $('#year').val('2015');
