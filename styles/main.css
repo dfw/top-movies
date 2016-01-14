@@ -198,6 +198,7 @@ h1 {
   color: #444;
 }
 
+#layout li:active,
 #layout li.active {
   color: #327CCB;
 }
