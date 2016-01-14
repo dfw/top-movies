@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Movies</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/jquery-1.12.0.min.js"></script>
+  <script src="scripts/mustache.min.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+  <h1>
+    Top Movies In
+    <input id="year" type="text" placeholder="2015" maxlength="4">
+  </h1>
+  <header id="header"></header>
+  <section id="movies" class="loading"></section>
+  <section id="pagination"></section>
+  <footer id="footer">
+    <img src="images/tmdb-logo.png" alt="Powered by themoviedb.org">
+    <p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+    <p>&copy; <span class="year"></span> DFW<p>
+  </footer>
+  <script id="tmpl-header" type="x-tmpl-mustache">
+    <p>Page {{current_page}} of {{last_page}}</p>
+    <ul id="layout">
+      <li id="grid" class="icon-th-large"></li>
+      <li id="list" class="icon-list"></li>
+    </ul>
+  </script>
+  <script id="tmpl-movies" type="x-tmpl-mustache">
+    <ul>
+      {{#results}}
+      <li>
+        {{#poster_path}}
+        <figure>
+          <img src="http://image.tmdb.org/t/p/w300{{poster_path}}" alt="{{title}}">
+        </figure>
+        {{/poster_path}}
+        {{^poster_path}}
+        <figure class="no-poster">
+          <img src="images/film-reel.png">
+        </figure>
+        {{/poster_path}}
+        <dl>
+          <dt>{{title}}</dt>
+            {{#overview}}
+            <dd>{{overview}}</dd>
+            {{/overview}}
+            {{^overview}}
+            <dd>No overview available.</dd>
+            {{/overview}}
+        </dl>
+      </li>
+      {{/results}}
+    </ul>
+  </script>
+  <script id="tmpl-no-movies" type="x-tmpl-mustache">
+    <p class="no-movies">No movies available.</p>
+  </script>
+  <script id="tmpl-pagination" type="x-tmpl-mustache">
+    <ul>
+      {{#prev}}
+      <li class="prev">
+        <span class="icon-left-open"></span>
+        Prev
+      </li>
+      {{/prev}}
+      <li>
+        Page
+        <select>
+          {{#pages}}
+          <option value="{{number}}" {{#selected}}selected{{/selected}}>{{number}}</option>
+          {{/pages}}
+        </select>
+        of {{last_page}}
+      </li>
+      {{#next}}
+      <li class="next">
+        Next
+        <span class="icon-right-open"></span>
+      </li>
+      {{/next}}
+    </ul>
+  </script>
+</body>
+</html>
