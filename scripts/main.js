@@ -1,5 +1,5 @@
 $(function() {
-  var user_action = ('ontouchend' in document.documentElement) ? 'ontouchend' : 'click';
+  var user_action = ('ontouchend' in document.documentElement) ? 'touchend' : 'click';
 
   var movie_search = {
     url: 'https://api.themoviedb.org/3/discover/movie',
