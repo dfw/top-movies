@@ -157,6 +157,8 @@ $(function() {
 
   get_year();
 
+  document.addEventListener('touchstart', function(){}, true);
+
   $('#year').on('keypress', is_integer);
 
   $('#year').on('keyup', function() {
