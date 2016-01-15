@@ -141,8 +141,8 @@ h1 {
 
 @media screen and (min-width: 660px) {
   h1 {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 40px;
+    line-height: 44px;
   }
 }
 
@@ -159,6 +159,12 @@ h1 {
   -webkit-transition: border 250ms ease-out, color 250ms ease-out;
   -moz-transition: border 250ms ease-out, color 250ms ease-out;
   transition: border 250ms ease-out, color 250ms ease-out;
+}
+
+@media screen and (min-width: 660px) {
+  #year {
+    width: 100px;
+  }
 }
 
 #year:focus {
@@ -430,6 +436,7 @@ h1 {
 
 @media screen and (min-width: 660px) {
   #footer img {
+    margin-bottom: 5px;
     max-width: 260px;
   }
 }
@@ -444,4 +451,10 @@ h1 {
 
 #footer p + p {
   margin-top: 10px;
+}
+
+@media screen and (min-width: 660px) {
+  #footer p + p {
+    margin-top: 20px;
+  }
 }
