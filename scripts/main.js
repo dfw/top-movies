@@ -54,6 +54,8 @@ $(function() {
         .fail(function() {
           var no_movies_tmpl = movie_search.get_template('tmpl-no-movies');
           movie_search.render_content('movies', no_movies_tmpl);
+          movie_search.remove_header();
+          movie_search.remove_pagination();
         });
     },
     update_year: function(yr) {
@@ -131,7 +133,6 @@ $(function() {
       });
     },
     animate_type: function() {
-
       $('#year').focus();
 
       setTimeout(function() {
