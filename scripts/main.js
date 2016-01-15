@@ -27,7 +27,6 @@ $(function() {
       }
 
       var jqxhr = $.getJSON(movie_search.url, movie_search.data, function(data) {
-        console.log(data);
         if (data.total_results > 0) {
           // Header
           var header_tmpl = movie_search.get_template('tmpl-header');
@@ -209,8 +208,6 @@ $(function() {
         (charCode < 48 || charCode > 57)) {
       return false;
     }
-
-    console.log(charCode);
 
     return true;
   }
