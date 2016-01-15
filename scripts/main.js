@@ -1,3 +1,5 @@
+'use strict';
+
 $(function() {
   var user_action = ('ontouchend' in document.documentElement) ? 'touchend' : 'click';
 
