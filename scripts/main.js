@@ -154,6 +154,8 @@ $(function() {
 
         $('#movies').removeClass('loading');
       }, 1800);
+
+      $('#year').focus();
     }
   };
 
